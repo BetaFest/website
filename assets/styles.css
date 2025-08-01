@@ -153,6 +153,7 @@ body::before {
 
 .site-footer p {
   color: #fff;
+  text-align: center;
 }
 
 .site-footer a {
