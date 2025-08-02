@@ -20,12 +20,16 @@ title: About - BetaFest
 	<div class="card quote-card">
 		<b><em>Some clarifications on the non-goals of BetaFest - basically, what defines our "spirit".</em></b>
 	</div>
-    <b>NO REWARDS, JUST AN EXCUSE TO BE CREATIVE!</b>
+    <b>BETAFEST HAS NO MONEY</b>
+	<p>We're not just non-profit - we also don't have a budget, income, or bank account.</p>
+	<p>All server hosting is donated, and we don't take any commission on profits generated.</p> 
+	<br />
+    <b>NO REWARDS, JUST AN EXCUSE TO BE CREATIVE</b>
 	<p>BetaFest isn't a contest - it's a community gathering.</p>
 	<p>We believe creativity doesn't need rewards to flourish, just an excuse to start. BetaFest is a good excuse.</p>
 	<br />
-    <b>Open Source</b>
-	<p>Our {% include website_source.html %} is open source.</p>
+    <b>WE'RE OPEN SOURCE</b>
+	<p>Everything made for BetaFest, including {% include website_source.html %} is open source.</p>
 	<p>It should go without saying, but feel free to host your own derivative events for your community or the modding community at large. BetaFest itself is a derivative event of ModFest.</p>
   </div>
   <div class="card text-card">

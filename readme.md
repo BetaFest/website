@@ -3,7 +3,7 @@ This repository contains the source for [betafest.dannytaylor.dev](https://betaf
 
 ## Contributing  
 
-By contributing to this wiki you agree with the [Developer Certificate of Origin (DCO)][DCO].  
+By contributing to this repository you agree with the [Developer Certificate of Origin (DCO)][DCO].  
 
 ### How do I contribute?  
 1. #### If you've noticed something that needs updating, [Fork this repository](https://github.com/BetaFest/website/fork) and commit your changes
