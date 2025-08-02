@@ -83,8 +83,6 @@ body {
   color: #fff;
   white-space: nowrap;
   line-height: 1;
-  user-select: none;
-  transition: none;
 }
 
 .title-text-2 {
@@ -93,8 +91,6 @@ body {
   color: #fff;
   white-space: nowrap;
   line-height: 1;
-  user-select: none;
-  transition: none;
   width: 100%;
   max-width: 864px;
   padding: 16px;
@@ -112,8 +108,6 @@ body {
   color: #fff;
   white-space: nowrap;
   line-height: 1;
-  user-select: none;
-  transition: none;
 }
 
 .title-link .logo {
@@ -229,8 +223,6 @@ a {
   font-size: 2rem;
   white-space: nowrap;
   line-height: 1;
-  user-select: none;
-  transition: none;
 }
 
 .link-link {
