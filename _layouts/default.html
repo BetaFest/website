@@ -34,23 +34,24 @@
             </div>
         </footer>
         <script>
-            document.addEventListener("DOMContentLoaded", () => {
-              const content = document.querySelector("main");
-              document.querySelectorAll("a").forEach(link => {
-            	link.addEventListener("click", async e => {
-            	  if (link.hostname === location.hostname && !link.hasAttribute("target")) {
-            		e.preventDefault();
-            		const res = await fetch(link.href);
-            		const text = await res.text();
-            		const parser = new DOMParser();
-            		const doc = parser.parseFromString(text, "text/html");
-            		content.innerHTML = doc.querySelector("main").innerHTML;
-            		history.pushState({}, "", link.href);
-            	  }
-            	});
-              });
-              window.addEventListener("popstate", () => location.reload());
-            });
+			document.addEventListener("DOMContentLoaded", () => {
+			  const content = document.querySelector("main");
+			  document.querySelectorAll("a").forEach(link => {
+				link.addEventListener("click", async e => {
+				  if (link.hostname === location.hostname && !link.hasAttribute("target")) {
+					e.preventDefault();
+					const res = await fetch(link.href);
+					const text = await res.text();
+					const parser = new DOMParser();
+					const doc = parser.parseFromString(text, "text/html");
+					content.innerHTML = doc.querySelector("main").innerHTML;
+					document.title = doc.querySelector("title").textContent;
+					history.pushState({}, "", link.href);
+				  }
+				});
+			  });
+			  window.addEventListener("popstate", () => location.reload());
+			});
         </script>
     </body>
 </html>

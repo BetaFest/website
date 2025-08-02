@@ -36,13 +36,13 @@ title: About - BetaFest
     <p class="title-text-3">Mod Jams You Might Like</p>
 	<p>Looking for more mod jams? Here's our recommendations:</p>
 	<div class="link-container modfest">
-	  <a href="https://modfest.net" class="link-link" aria-label="ModFest">
+	  <a href="https://modfest.net" target="_blank" class="link-link" aria-label="ModFest">
         <img src="https://modfest.net/assets/logo/modfest.svg" class="link-logo" alt="">
         <span class="link-text modfest">ModFest</span>
       </a>
 	</div>
 	<div class="link-container modgarden">
-      <a href="https://modgarden.net" class="link-link" aria-label="Mod Garden">
+      <a href="https://modgarden.net" target="_blank" class="link-link" aria-label="Mod Garden">
         <img src="https://modgarden.net/images/icon/generic.png" class="link-logo" alt="">
         <span class="link-text modgarden">Mod Garden</span>
       </a>
