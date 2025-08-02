@@ -4,21 +4,22 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{{ page.title }}</title>
-        <link rel="stylesheet" href="/assets/styles.css" />
-        <link rel="icon" href="/assets/logo.png" type="image/png" />
+        <link rel="stylesheet" href="/assets/css/layouts/default/style.css" />
+        <link rel="icon" href="/assets/img/logo.png" type="image/png" />
+		<meta name="layout" content="default">
     </head>
     <body>
         <div class="container">
             <div class="card title-card">
                 <a href="/" class="title-link" aria-label="Home">
-                <img src="/assets/logo.png" class="logo" alt="">
+                <img src="/assets/img/logo.png" class="logo" alt="">
                 <span class="title-text">BetaFest</span>
                 </a>
                 <div class="social-buttons">
-                    <a href="https://github.com/BetaFest" target="_blank" aria-label="GitHub"><img src="/assets/github.svg" alt="GitHub"></a>
-                    <a href="https://modrinth.com/organization/betafest" target="_blank" aria-label="Modrinth"><img src="/assets/modrinth.svg" alt="Modrinth"></a>
-                    <a href="https://bsky.app/profile/betafest.dannytaylor.dev" target="_blank" aria-label="Bluesky"><img src="/assets/bluesky.svg" alt="BlueSky"></a>
-                    <a href="https://discord.gg/ytrCGrQRv2" target="_blank" aria-label="Discord"><img src="/assets/discord.svg" alt="Discord"></a>
+                    <a href="https://github.com/BetaFest" target="_blank" aria-label="GitHub"><img src="/assets/img/github.svg" alt="GitHub"></a>
+                    <a href="https://modrinth.com/organization/betafest" target="_blank" aria-label="Modrinth"><img src="/assets/img/modrinth.svg" alt="Modrinth"></a>
+                    <a href="https://bsky.app/profile/betafest.dannytaylor.dev" target="_blank" aria-label="Bluesky"><img src="/assets/img/bluesky.svg" alt="BlueSky"></a>
+                    <a href="https://discord.gg/ytrCGrQRv2" target="_blank" aria-label="Discord"><img src="/assets/img/discord.svg" alt="Discord"></a>
                 </div>
             </div>
             <main>
@@ -36,6 +37,8 @@
         <script>
 			document.addEventListener("DOMContentLoaded", () => {
 			  const content = document.querySelector("main");
+			  const currentLayout = document.querySelector('meta[name="layout"]')?.content;
+
 			  document.querySelectorAll("a").forEach(link => {
 				link.addEventListener("click", async e => {
 				  if (link.hostname === location.hostname && !link.hasAttribute("target")) {
@@ -44,12 +47,20 @@
 					const text = await res.text();
 					const parser = new DOMParser();
 					const doc = parser.parseFromString(text, "text/html");
+					const newLayout = doc.querySelector('meta[name="layout"]')?.content;
+
+					if (newLayout !== currentLayout) {
+					  location.href = link.href;
+					  return;
+					}
+
 					content.innerHTML = doc.querySelector("main").innerHTML;
 					document.title = doc.querySelector("title").textContent;
 					history.pushState({}, "", link.href);
 				  }
 				});
 			  });
+
 			  window.addEventListener("popstate", () => location.reload());
 			});
         </script>

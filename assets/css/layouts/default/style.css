@@ -5,7 +5,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   background-color: #171d23;
-  background-image: url('/assets/background.png');
+  background-image: url('/assets/img/layouts/default/background.png');
   background-repeat: repeat;
   background-size: 64px 64px;
   position: relative;
@@ -25,7 +25,7 @@ body {
 }
 
 .card {
-  background-image: url('/assets/card-background.png');
+  background-image: url('/assets/img/layouts/default/card-background.png');
   background-repeat: repeat;
   background-size: 64px 64px;
   border-radius: 12px;
@@ -134,7 +134,7 @@ body {
 }
 
 .quote-card {
-  background-image: url('/assets/quote-background.png');
+  background-image: url('/assets/img/layouts/default/quote-background.png');
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   font-style: italic;
